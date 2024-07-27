@@ -1,0 +1,1 @@
+export const faIcon = (name: string): string => `fas fa-${name}`;

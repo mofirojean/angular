@@ -1,0 +1,10 @@
+identifier: l9z1468e46y1a96e
+appPort: 1864
+staticPort: 1668
+reloadPort: 2667
+hostName: localhost
+projectName: mj-blog
+homeFolder: /home/mofirojean/Projects/angular/mj-blog
+distFolder: dist/mj-blog
+outDir: /home/mofirojean/Projects/angular/mj-blog/dist/static
+handle404: ''
