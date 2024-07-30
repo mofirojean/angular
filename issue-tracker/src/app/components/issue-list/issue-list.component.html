@@ -24,7 +24,7 @@
       <clr-dg-footer>{{ issues.length }} issues</clr-dg-footer>
     </clr-datagrid>
   </ng-container>
-} @else if (showReportIssue) {
+} @else {
   <app-issue-reporter (formClose)="onCloseReport()" />
 }
 

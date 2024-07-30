@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { IssueForm } from '../../model/issue-form';
 import { IssuesService } from '../../services/issues.service';
@@ -16,9 +16,10 @@ import { Issue } from '../../model/issue';
     }
   `
 })
-export class IssueReporterComponent {
+export class IssueReporterComponent implements OnInit {
   issueForm: FormGroup<IssueForm>;
   @Output() formClose = new EventEmitter();
+  suggestions: Issue[] = [];
 
   constructor(
     private fb :FormBuilder,
@@ -30,6 +31,12 @@ export class IssueReporterComponent {
       priority: new FormControl('', { nonNullable: true, validators: Validators.required }),
       type: new FormControl('', { nonNullable: true, validators: Validators.required })
     });
+  }
+  
+  ngOnInit(): void {
+    this.issueForm.controls.title.valueChanges.subscribe(title => {
+      this.suggestions = this.issueService.getSuggestions(title);
+    })    
   }
 
   addIssue() {
