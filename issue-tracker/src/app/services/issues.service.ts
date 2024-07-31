@@ -33,4 +33,9 @@ export class IssuesService {
     }
     return [];
   }
+
+  updateIssue(issue: Issue) {
+    let issueIndex = this.issues.findIndex(i => i.issueNo === issue.issueNo);
+    this.issues[issueIndex] = issue;
+  }
 }

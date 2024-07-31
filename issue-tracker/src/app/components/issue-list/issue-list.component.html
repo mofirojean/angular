@@ -10,6 +10,7 @@
       <clr-dg-row *clrDgItems="let issue of issues">
         <clr-dg-action-overflow>
           <button class="action-item" (click)="selectedIssue = issue">Resolve</button>
+          <button class="action-item" (click)="editedIssue = issue">Edit</button>
         </clr-dg-action-overflow>
         <clr-dg-cell>{{ issue.issueNo }}</clr-dg-cell>
         <clr-dg-cell>{{ issue.type }}</clr-dg-cell>
@@ -32,3 +33,6 @@
   <app-confirm-dialog [issueNo]="selectedIssue.issueNo" (confirm)="onConfirm($event)" />
 }
 
+@if (editedIssue) {
+  <app-edit-dailog [issue]="editedIssue" (formClose)="onCloseEdit()" />
+}

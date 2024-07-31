@@ -9,13 +9,15 @@ import { IssueListComponent } from './components/issue-list/issue-list.component
 import { ReactiveFormsModule } from '@angular/forms';
 import { IssueReporterComponent } from './components/issue-reporter/issue-reporter.component';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { EditDailogComponent } from './components/edit-dailog/edit-dailog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IssueListComponent,
     IssueReporterComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    EditDailogComponent
   ],
   imports: [
     BrowserModule,
