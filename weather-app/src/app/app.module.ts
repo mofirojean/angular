@@ -31,7 +31,6 @@ import { getRemoteConfig, provideRemoteConfig } from '@angular/fire/remote-confi
   ],
   providers: [
     provideAnimationsAsync(),
-    provideFirebaseApp(() => initializeApp({"projectId":"weather-app-ef18c","appId":"1:585662073264:web:a18c6fcb7017357e102e75","storageBucket":"weather-app-ef18c.appspot.com","apiKey":"AIzaSyAaJY7qqlyzjD_Gyy4RKrLT7Y30sdggda0","authDomain":"weather-app-ef18c.firebaseapp.com","messagingSenderId":"585662073264"})),
     provideFirestore(() => getFirestore()),
     provideRemoteConfig(() => getRemoteConfig())
   ],
