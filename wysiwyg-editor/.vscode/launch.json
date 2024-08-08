@@ -3,6 +3,16 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Electron Main",
+      "program": "${workspaceFolder}/dist/wysiwyg-editor/shell.js",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
       "name": "ng serve",
       "type": "chrome",
       "request": "launch",
