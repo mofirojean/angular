@@ -1,1 +1,5 @@
-<ngx-wig placeholder="Enter your content"></ngx-wig>
+<ngx-wig
+  [ngModel]="content"
+  (contentChange)="saveContent($event)"
+  placeholder="Enter your content"
+></ngx-wig>

@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgxWigModule } from "ngx-wig";
 import { EditorComponent } from './components/editor/editor.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { EditorComponent } from './components/editor/editor.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxWigModule
+    NgxWigModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
