@@ -18,8 +18,10 @@ import {
 } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import {
-  camera,
-  globe
+  cameraOutline,
+  cameraSharp,
+  globeOutline,
+  globeSharp
 } from 'ionicons/icons';
 
 @Component({
@@ -61,8 +63,10 @@ export class AppComponent {
   ];
   constructor() {
     addIcons({
-      camera,
-      globe
+      cameraOutline,
+      cameraSharp,
+      globeOutline,
+      globeSharp
     });
   }
 }

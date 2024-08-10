@@ -1,5 +1,7 @@
 {
   "name": "phototag",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular-standalone"
 }
