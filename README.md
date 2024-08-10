@@ -19,3 +19,11 @@
     - Enabling offline mode with the service worker
     - Staying up to date with in-app notifications
     - Deploying our app with Firebase Hosting
+
+4. ## Building a WYSIWYG Editor for the Desktop Using Electron
+
+    In this project, we will build a desktop WYSIWYG editor that keeps its content local to the filesystem. Initially, we will build it as an Angular application using ngx-wig, a popular WYSIWYGAngular library. We will then convert it to a desktop application using Electron and learn how to synchronize content between Angular and Electron. We will also see how to persist the content of the editor into the filesystem. Finally, we will package our application as a single executable file that can be run in a desktop environment.
+
+5. ## Building a Mobile Photo Geotagging Application Using Capacitor and 3D Maps
+
+    In this project, we will build a mobile application that can take photos according to the current location and preview them on a map. Initially, we will learn how to create a mobile application using Angular and Ionic. We will then use Capacitor to take photos using the camera of the mobile device and tag them with the current location via GPS. We will upload those photos to Firebase along with their location data. Finally, we will use CesiumJS to load location data on a 3D globe along with a preview of the photo.
