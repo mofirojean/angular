@@ -22,6 +22,19 @@ export class PhotoService {
 
   // take a photo
   async takePhoto() {
+    const { camera } = await Camera.checkPermissions();
+
+    if (camera !== 'granted' && camera !== 'limited') {
+      // Request camera permission if not granted or limited
+      const { camera: cameraPermission } = await Camera.requestPermissions();
+
+      if (cameraPermission !== 'granted' && cameraPermission !== 'limited') {
+        // Handle permission denial (e.g., show a message)
+        console.error('Camera permission denied');
+        return;
+      }
+    }
+
     const { latitude, longitude } = await this.getLocation();
     const cameraPhoto = await Camera.getPhoto({
       resultType: CameraResultType.DataUrl,
