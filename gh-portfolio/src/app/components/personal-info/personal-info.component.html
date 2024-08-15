@@ -1,0 +1,44 @@
+@if (user) {
+<div class="w-full border-1 rounded-lg">
+  <img
+    [src]="user.avatar_url"
+    class="rounded-t-lg"
+    alt="{{ user.name }} photo"
+  />
+  <div class="flex flex-col gap-2 p-2">
+    <div class="font-bold text-3xl">{{ user.name }}</div>
+    <div class="font-bold text-sm">{{ user.bio }}</div>
+  </div>
+  <ul class="list-none">
+    <hr />
+    <li class="flex gap-2 items-center p-2" title="Location">
+      <i [class]="faIcon('location')"></i>{{ user.location }}
+    </li>
+    <hr />
+    <li class="flex gap-2 items-center p-2" title="Followers">
+        <i [class]="faIcon('users')"></i>{{ user.followers }} followers
+    </li>
+    <hr />
+    <li class="flex gap-2 p-2">
+        <a href="https://twitter.com/{{user.twitter_username}}" target="_blank" class="text-3xl">
+            <i [class]="faBrand('twitter')"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/mofirojean" target="_blank" class="text-3xl">
+            <i [class]="faBrand('linkedin')"></i>
+        </a>
+        <a href="https://www.instagram.com/mofirojean" target="_blank" class="text-3xl">
+            <i [class]="faBrand('instagram')"></i>
+        </a>
+        <a href="https://www.facebook.com/MofiroJean" target="_blank" class="text-3xl">
+            <i [class]="faBrand('facebook')"></i>
+        </a>
+        <a href="https://wa.me/message/WSRYOI4MSEUXB1" target="_blank" class="text-3xl">
+            <i [class]="faBrand('whatsapp')"></i>
+        </a>
+        <a href="mailto:mofirojean@gmail.com" class="text-3xl">
+            <i [class]="faIcon('envelope')"></i>
+        </a>
+    </li>
+  </ul>
+</div>
+}

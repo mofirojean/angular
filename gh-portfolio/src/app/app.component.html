@@ -1,13 +1,25 @@
-<div class="flex items-center">
-  <img width="40" alt="Angular Logo" src="assets/angular.png" />
-  <span>Welcome to my GitHub portfolio</span>
-  <a
-    class="ms-auto p-2"
-    target="_blank"
-    rel="noopener"
-    href="https://github.com/{{username}}"
-    title="GitHub"
-  >
-    <i [class]="faBrand('github')"></i>
-  </a>
+<div class="w-screen h-screen flex flex-col">
+  <div class="toolbar flex items-center">
+    <img width="40" alt="Angular Logo" src="assets/angular.png" />
+    <span>Welcome to my GitHub portfolio</span>
+    <a
+      class="ms-auto p-2"
+      target="_blank"
+      rel="noopener"
+      href="https://github.com/{{ username }}"
+      title="GitHub"
+    >
+      <i [class]="faBrand('github')"></i>
+    </a>
+  </div>
+  <div class="content w-full flex flex-grow flex-col">
+    <div class="grid grid-cols-3 h-full">
+      <div class="col-3">
+        <app-personal-info />
+      </div>
+      <div class="col-9 col-span-3">
+        
+      </div>
+    </div>
+  </div>
 </div>
