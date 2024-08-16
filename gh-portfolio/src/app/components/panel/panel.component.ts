@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { faIcon } from '../../utils/icon.utils';
 
 @Component({
   selector: 'app-panel',
@@ -8,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrl: './panel.component.scss'
 })
 export class PanelComponent {
+  @Input() caption = '';
+  @Input() icon = '';
+  protected readonly faIcon = faIcon;
 
 }

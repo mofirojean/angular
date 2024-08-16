@@ -1,1 +1,9 @@
-<p>panel works!</p>
+<div class="border-1 mb-4 rounded-t-lg">
+    <div class="flex items-center gap-2 p-2 font-bold text-slate-800 rounded-t-lg bg-slate-100">
+        <i [class]="faIcon(icon)"></i>
+        {{caption}}
+    </div>
+    <div class="w-full flex justify-center">
+        <ng-content></ng-content>
+    </div>
+</div>

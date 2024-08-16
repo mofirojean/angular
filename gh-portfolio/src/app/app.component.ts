@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { faBrand, faIcon } from './utils/icon.utils';
 import { GithubService } from './services/github/github.service';
 import { PersonalInfoComponent } from './components/personal-info/personal-info.component';
+import { RepositoriesComponent } from './components/repositories/repositories.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [PersonalInfoComponent],
+  imports: [PersonalInfoComponent, RepositoriesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
