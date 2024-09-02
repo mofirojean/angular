@@ -1,0 +1,25 @@
+.toolbar {
+  height: 60px;
+  //   background-color: #1976d2;
+  background-color: #252323;
+  color: white;
+  font-weight: 600;
+}
+.toolbar img {
+  margin: 0 16px;
+}
+.toolbar i {
+  font-size: 1.5rem;
+  color: white;
+  margin: 0 16px;
+}
+.toolbar a {
+  margin-bottom: 5px;
+}
+.toolbar i:hover {
+  opacity: 0.8;
+}
+.content {
+  margin: 52px auto 32px;
+  padding: 0 16px;
+}

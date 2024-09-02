@@ -1,0 +1,36 @@
+<app-panel caption="Repositories" icon="archive">
+  <div class="grid p-3 w-full">
+    @for (repo of repos; track $index) {
+      <div class="col-12 md:col-3 lg:col-4">
+        <div class="border-1 rounded-xl">
+          <div class="flex px-3 pt-3 flex-col gap-2 justify-start">
+            <h5 class="text-start underline">
+              <a
+                class="font-bold text-xl"
+                style="color: rgb(64,64,202)"
+                [href]="repo.html_url"
+              >{{ repo.name }}</a
+              >
+            </h5>
+            <p class="text-sm">{{ repo.description }}</p>
+          </div>
+          <hr />
+          <ul class="list-none flex gap-4 py-2 px-3 text-gray-600">
+            <li class="flex items-center gap-2">
+              <i [class]="faIcon('code')"></i>
+              {{ repo.language }}
+            </li>
+            <li class="flex items-center gap-2">
+              <i [class]="faIcon('star')"></i>
+              {{ repo.stargazers_count }}
+            </li>
+            <li class="flex items-center gap-2">
+              <i [class]="faIcon('code-branch')"></i>
+              {{ repo.forks_count }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    }
+  </div>
+</app-panel>
