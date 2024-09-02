@@ -15,9 +15,9 @@
           <p class="text-sm">{{ repo.description }}</p>
         </div>
         <hr />
-        <ul class="list-none flex gap-3">
+        <ul class="list-none flex gap-4 py-2 px-3 text-gray-600">
           <li class="flex items-center gap-2">
-            <i [class]="faIcon('icon')"></i>
+            <i [class]="faIcon('code')"></i>
             {{ repo.language }}
           </li>
           <li class="flex items-center gap-2">
@@ -25,7 +25,7 @@
             {{ repo.stargazers_count }}
           </li>
           <li class="flex items-center gap-2">
-            <i [class]="faIcon('diagram-2')"></i>
+            <i [class]="faIcon('code-branch')"></i>
             {{ repo.forks_count }}
           </li>
         </ul>
