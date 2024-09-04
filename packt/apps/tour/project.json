@@ -8,12 +8,16 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/tour",
         "index": "apps/tour/src/index.html",
         "browser": "apps/tour/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/tour/tsconfig.app.json",
         "assets": [
           {
@@ -21,7 +25,10 @@
             "input": "apps/tour/public"
           }
         ],
-        "styles": ["apps/tour/src/styles.css"],
+        "styles": [
+          "@angular/material/prebuilt-themes/deeppurple-amber.css",
+          "apps/tour/src/styles.css"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -71,7 +78,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/tour/jest.config.ts"
       }
