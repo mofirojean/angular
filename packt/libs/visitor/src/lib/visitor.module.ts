@@ -1,27 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { VisitorComponent } from './visitor.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
+import { PoiModule } from '@packt/poi';
+import { PoiListComponent } from './poi-list/poi-list.component';
+import { MatModule } from './mat.module';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   imports: [
     CommonModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
+    MatModule,
     RouterModule.forChild([
       { path: '', component: VisitorComponent }
-    ])
+    ]),
+    PoiModule,
+    GoogleMapsModule
   ],
   declarations: [
-    VisitorComponent
+    VisitorComponent,
+    PoiListComponent
   ]
 })
 export class VisitorModule {
