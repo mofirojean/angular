@@ -18,6 +18,5 @@ export class PoiListComponent implements OnInit {
   ngOnInit() {
     this.store.dispatch(PoiActions.initPoi());
     this.pois$ = this.store.select(PoiSelectors.selectAllPoi);
-    console.log(this.store.select(PoiSelectors.selectAllPoi).subscribe(res => console.log(res)))
   }
 }
