@@ -6,6 +6,7 @@ import { PoiModule } from '@packt/poi';
 import { PoiListComponent } from './poi-list/poi-list.component';
 import { MatModule } from './mat.module';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { GoogleMapsModule } from '@angular/google-maps';
   ],
   declarations: [
     VisitorComponent,
-    PoiListComponent
+    PoiListComponent,
+    MapComponent
   ]
 })
 export class VisitorModule {
