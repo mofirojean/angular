@@ -21,4 +21,20 @@ export class PoiEffects {
       })
     )
   );
+
+  visit$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(PoiActions.visitPoi),
+      switchMap(action => {
+        const stat = localStorage.getItem('tour-' + action.poiId);
+        const total = stat ? Number(stat) + 1 : 1;
+        localStorage.setItem('tour-' + action.poiId, total.toString());
+        return of(PoiActions.visitPoiSuccess())
+      }),
+      catchError((error) => {
+        console.error('Error', error);
+        return of(PoiActions.visitPoiFailure({ error }));
+      })
+    )
+  );
 }
