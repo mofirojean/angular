@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {Card} from "../models/card";
+import {Card} from "../../models/card";
 import { CdkDragDrop, moveItemInArray } from "@angular/cdk/drag-drop";
 
 @Component({

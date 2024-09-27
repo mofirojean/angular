@@ -1,23 +1,28 @@
 import { NgModule } from '@angular/core';
 import { UiControlsComponent } from './ui-controls.component';
-import { CardListComponent } from './card-list/card-list.component';
+import { CardListComponent } from './components/card-list/card-list.component';
 import {CommonModule} from "@angular/common";
 import {DragDropModule} from "@angular/cdk/drag-drop";
+import { CopyButtonComponent } from './components/copy-button/copy-button.component';
+import {ClipboardModule} from "@angular/cdk/clipboard";
 
 
 
 @NgModule({
   declarations: [
     UiControlsComponent,
-    CardListComponent
+    CardListComponent,
+    CopyButtonComponent
   ],
   imports: [
     CommonModule,
-    DragDropModule
+    DragDropModule,
+    ClipboardModule
   ],
   exports: [
     UiControlsComponent,
-    CardListComponent
+    CardListComponent,
+    CopyButtonComponent
   ]
 })
 export class UiControlsModule { }
