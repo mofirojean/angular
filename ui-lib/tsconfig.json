@@ -19,6 +19,12 @@
     "module": "ES2022",
     "useDefineForClassFields": false,
     "paths": {
+      "@ng-doc/generated": [
+        "./ng-doc/ui-lib/index.ts"
+      ],
+      "@ng-doc/generated/*": [
+        "./ng-doc/ui-lib/*"
+      ],
       "ui-controls": [
         "./dist/ui-controls"
       ]
