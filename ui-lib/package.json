@@ -15,6 +15,7 @@
     "@angular/common": "^17.3.0",
     "@angular/compiler": "^17.3.0",
     "@angular/core": "^17.3.0",
+    "@angular/elements": "^17.3.12",
     "@angular/forms": "^17.3.0",
     "@angular/platform-browser": "^17.3.0",
     "@angular/platform-browser-dynamic": "^17.3.0",
@@ -24,6 +25,7 @@
     "@ng-doc/core": "^17.6.10",
     "@ng-doc/ui-kit": "^17.6.10",
     "bulma": "^1.0.2",
+    "ngx-build-plus": "^17.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
