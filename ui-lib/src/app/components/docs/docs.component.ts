@@ -10,17 +10,12 @@ import {NgDocButtonIconComponent, NgDocIconComponent, NgDocTooltipDirective} fro
     <ng-doc-root>
       <ng-doc-navbar [leftContent]="ngDocNavbarLeft" [rightContent]="ngDocNavbarRight">
         <ng-template #ngDocNavbarLeft>
-          <h3 style="margin: 0">MyAwesomeDoc</h3>
+          <h3 style="margin: 0; color: black; font-weight: bold;" class="brand is-size-5">UI Controls</h3>
         </ng-template>
         <ng-template #ngDocNavbarRight>
-          <a
-            ngDocNavbarRight
-            ng-doc-button-icon
-            class="ng-doc-header-controls"
-            size="large"
-            href="https://github.com/me/my-repo"
-            target="_blank"
-            ngDocTooltip="Check my repo">me</a>
+          <button class="button is-light is-family-secondary">
+            Pro
+          </button>
         </ng-template>
       </ng-doc-navbar>
       <ng-doc-sidebar></ng-doc-sidebar>
