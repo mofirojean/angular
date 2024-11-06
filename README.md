@@ -1,5 +1,20 @@
 # Angular Projects
 
+This repository includes a suit of angular projects along with their descriptions that can help give you a better overview of what angular is all about. This set of projects makes use of various angular features and how to use angular in different situations.
+
+# Table of Contents
+
+- [1. Building an SPA Application with Scully and Angular Router](#1-building-an-spa-application-with-scully-and-angular-router)
+- [2. Building an Issue Tracker Application with Reactive Forms and Clarity](#2-building-an-issue-tracker-application-with-reactive-forms-and-clarity)
+- [3. Building a PWA Weather Application Using Angular Service Worker](#3-building-a-pwa-weather-application-using-angular-service-worker)
+- [4. Building a WYSIWYG Editor for the Desktop Using Electron](#4-building-a-wysiwyg-editor-for-the-desktop-using-electron)
+- [5. Building a Mobile Photo Geotagging Application Using Capacitor and 3D Maps](#5-building-a-mobile-photo-geotagging-application-using-capacitor-and-3d-maps)
+- [6. Building a Mobile Application with Ionic and Capacitor](#6-building-a-mobile-application-with-ionic-and-capacitor)
+- [7. Building an SSR Application for a GitHub Portfolio Using Angular](#7-building-an-ssr-application-for-a-github-portfolio-using-angular)
+- [8. Building an Enterprise Portal Using Nx Monorepo Tools and NgRx](#8-building-an-enterprise-portal-using-nx-monorepo-tools-and-ngrx)
+- [9. Building a Component UI Library Using Angular CLI and Angular CDK](#9-building-a-component-ui-library-using-angular-cli-and-angular-cdk)
+
+
 1. ## Building an SPA Application with Scully and Angular Router
 
     In this project, we will build a personal blog using the Angular framework and enhance it with Jamstack characteristics using the Scully site generator. Initially, we will scaffold a new Angular application and enable it for routing. We will then create the basic layout of our application by adding some barebones components. As soon as we have a working Angular application, we will add blog support to it using Scully. We will then create some blog posts using Markdown files and display them on the home page of our application.
@@ -27,3 +42,45 @@
 5. ## Building a Mobile Photo Geotagging Application Using Capacitor and 3D Maps
 
     In this project, we will build a mobile application that can take photos according to the current location and preview them on a map. Initially, we will learn how to create a mobile application using Angular and Ionic. We will then use Capacitor to take photos using the camera of the mobile device and tag them with the current location via GPS. We will upload those photos to Firebase along with their location data. Finally, we will use CesiumJS to load location data on a 3D globe along with a preview of the photo.
+
+6. ## Building a Mobile Photo Geotagging Application Using Capacitor and 3D Maps
+
+    Angular is a cross-platform JavaScript framework that can be used to build applications for different platforms such as web, desktop, and mobile. Moreover, it allows developers to use the same code base and apply the same web techniques to each platform, enjoying the same experience and performance. In this chapter, we will investigate how we can build mobile applications using Angular.
+    `Ionic` is a popular UI toolkit that allows us to build mobile applications using web technologies such as Angular. The Capacitor library greatly enhances Ionic applications by enabling them to run natively on Android and iOS devices. In this chapter, we will use both technologies to build a mobile application to take geotagged photos and display them on a 3D map. In this project this is what is going to cover in details.
+    - Creating a mobile application with Ionic
+    - Taking photos with Capacitor
+    - Storing data in Firebase
+    - Previewing photos with CesiumJS
+
+7. ## Building an SSR Application for a GitHub Portfolio Using Angular
+
+    A typical Angular application follows the Single-Page Application (SPA) approach, where each page is created in the DOM of the browser while the user interacts with the application. A web server hosts the application and serves only the main page, usually called index.html, at application startup.
+    `Server-Side Rendering (SSR)` is a technique that follows an entirely different approach for application rendering than SPA. It uses the server to prerender pages when the user requests them at runtime. Rendering content on the server dramatically enhances the performance of a web application and improves its Search Engine Optimization (SEO) capabilities. To perform SSR in an Angular application, we use a library called Angular Universal.
+In this chapter, we will learn how to benefit from Angular Universal by building a portfolio application using the GitHub API. In this project this is what is going to cover in details.
+    - Building an Angular application with the GitHub API
+    - Integrating Angular Universal
+    - Prerendering content during build
+    - Enhancing SEO capabilities
+
+8. ## Building an Enterprise Portal Using Nx Monorepo Tools and NgRx
+
+    Typical enterprise applications usually consist of a backend and a frontend system. The backend is responsible for interacting with a database for data persistence and exposes a REST API. The frontend communicates with the backend system via the REST interface to exchange data. The frontend system can sometimes consist of multiple applications, including a web interface or a mobile application. Keeping all these applications and systems in separate source control repositories scales poorly and is difficult to maintain and build. Alternatively, we can follow a `monorepo` architecture for large enterprise applications, where each application resides in a separate location inside the same repository.
+    A popular tool in the Angular ecosystem that embraces monorepo architecture is `Nx`. Combining an Nx monorepo application with a state management library can significantly improve your application. NgRx, a popular state management library for Angular applications, can help us maintain a consistent and manageable global state.
+
+    In this project, we will investigate both technologies by building an enterprise portal application for visiting points of interest (POIs). We will cover the following cases;
+    - Creating a monorepo application using Nx
+    - Creating user-specific portalsBuilding an Enterprise Portal Using Nx Monorepo Tools and NgRx
+    - Managing application state with NgRx
+    - Visualizing data with graphs
+
+9. ## Building a Component UI Library Using Angular CLI and Angular CDK
+
+    An Angular application consists of Angular components that are organized into modules. When components need to share a similar appearance or behavior across modules, we extract their functionality into reusable components and group them in a shared module. Reusable components may vary from complex UI structures with many controls, such as forms, to single native HTML elements, such as buttons.
+    A component UI library is a collection of reusable components that can be used outside a specific application domain. A large enterprise application built with a monorepo architecture can use these components across all its applications. A project outside an organization can also use the same component library as an external dependency.
+    The Angular CLI includes all the necessary tooling for creating libraries with Angular. The Angular Component Dev Kit (CDK) provides a broad range of functionalities for creating accessible and high-performant UI components. In this project, we will combine them with Bulma, a modern CSS framework, to create a simple component UI library from scratch.
+    In this chapter, we will cover the following topics in more detail:
+    - Creating a library with the Angular CLI
+    - Building a draggable card list
+    - Interacting with the clipboard
+    - Publishing an Angular library to npm
+    - Using components as Angular elements
