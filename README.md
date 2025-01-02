@@ -104,3 +104,7 @@ The Angular CLI includes all the necessary tooling for creating libraries with A
 - Interacting with the clipboard
 - Publishing an Angular library to npm
 - Using components as Angular elements
+
+### 9. Building a phonebook with Angular
+
+A phonbook application built using Angular, TailwindCSS, PrimeNg and JSON web server
