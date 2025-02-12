@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+::-webkit-scrollbar {
+    width: 10px; // Slightly wider for better UX
+    height: 10px;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #101524; // Midnight-850 (Dark background)
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #4b5c92, #2c3a63); // Midnight-550 to 650 gradient
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #6777af, #3e5189); // Lighter gradient on hover
+  }
+  
+  // Firefox scrollbar styling
+  * {
+    scrollbar-color: #4b5c92 #101524; // Thumb color, Track color
+    scrollbar-width: thin;
+  }
+  
