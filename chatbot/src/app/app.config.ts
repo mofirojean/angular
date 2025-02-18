@@ -1,6 +1,7 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import { ChatWindowComponent } from './components/chat-window/chat-window.component';
+import { ChatComponent } from './chat/chat.component';
+import { provideMarkdown } from 'ngx-markdown';
 
 
 export const appConfig: ApplicationConfig = {
@@ -9,13 +10,14 @@ export const appConfig: ApplicationConfig = {
     provideRouter([
       {
         path: "chat",
-        component: ChatWindowComponent
+        component: ChatComponent
       },
       {
         path: "",
         pathMatch: "full",
         redirectTo: "/chat"
       }
-    ])
+    ]),
+    provideMarkdown()
   ]
 };

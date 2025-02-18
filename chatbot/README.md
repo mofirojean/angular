@@ -1,59 +1,79 @@
-# Chatbot
+# Angular AI ChatApp with Gemini API  
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.6.
+This project is a **simple yet an amazing AI-powered chat application** built using **Angular** and the **Gemini API**. It enables seamless interaction with Google's **Gemini AI**, providing a smooth conversational experience within a web-based chat interface.  
 
-## Development server
+## **Getting Started**  
 
-To start a local development server, run:
+To set up and run this project locally, follow the steps below.  
+
+### **1. Clone the Repository**  
+
+Begin by cloning the repository to your local machine:  
+
+```bash
+git clone https://github.com/mofirojean/angular.git
+```
+
+### **2. Install Dependencies**  
+
+Navigate into the project directory and install all required dependencies using **npm**:  
+
+```bash
+npm install
+```
+
+### **3. Configure Your Gemini API Key**  
+
+To integrate the Gemini AI functionality, you need an **API key**.  
+
+#### **Steps to Obtain an API Key:**  
+1. Visit the [Gemini API documentation](https://ai.google.dev/gemini-api/docs).  
+2. Follow the instructions to generate your **API key**.  
+3. Open the `gemini.service.ts` file in your project.  
+4. Replace `"GEMINI_API_KEY"` with your actual API key in the constructor:  
+
+```typescript
+...
+
+constructor() {
+    this.generativeAi = new GoogleGenerativeAI("GEMINI_API_KEY");
+}
+
+...
+```
+
+### **4. Run the Development Server**  
+
+Start the development server using the Angular CLI:  
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Once the server is running, open your browser and go to:  
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+http://localhost:4200/
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+The application will automatically reload whenever you modify any of the source files.  
 
-```bash
-ng generate --help
-```
+## **Contributing** 
 
-## Building
 
-To build the project run:
+I welcome contributions from the community! To contribute to this project:
 
-```bash
-ng build
-```
+1. Fork the repository.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+2. Create a new branch for your feature or bug fix.
 
-## Running unit tests
+3. Make your changes and commit them with a clear message.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+4. Push your changes to your forked repository.
 
-```bash
-ng test
-```
+5. Open a pull request to the main repository.
 
-## Running end-to-end tests
+Before submitting a pull request, please ensure your changes follow the project's coding standards and are well-documented.
 
-For end-to-end (e2e) testing, run:
+Thank you for helping improve this project!
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

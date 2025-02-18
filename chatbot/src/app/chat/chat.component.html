@@ -1,7 +1,15 @@
 <div class="w-screen h-screen bg-midnight-900">
-    <div class="w-2/4 flex  relative h-full mx-auto px-3">
-        <div class="w-full">
-            Message
+    <div class="w-full md:w-3/4 lg:w-3/5 flex  relative h-full mx-auto px-3">
+        <div class="w-full flex flex-col gap-2 py-4">
+            @for (chat of chatHistory; track $index) {
+                @if (chat.from == "user") {
+                    <div class="p-4 rounded-lg ml-auto text-white bg-slate-700">{{chat.message}}</div>
+                } @else if (chat.from == "bot") {
+                    <div class="p-4 rounded-lg text-white hover:bg-slate-800">
+                        <markdown [data]="chat.message" />
+                    </div>
+                }
+            }
         </div>
         <div class="absolute w-full bottom-2 z-50 left-0 p-3 right-0">
             <div
@@ -74,11 +82,11 @@
                         </svg>
                     </div>
                 </div>
-                <textarea #messageInput placeholder="Message Gemini" rows="1"
+                <textarea #messageInput placeholder="Message Gemini" rows="1" [(ngModel)]="prompt" (keydown.enter)="onSubmit()"
                     class="flex-grow bg-midnight-900 rounded-lg placeholder:text-midnight-350 resize-none px-3 py-3 focus:outline-none active:outline-none text-midnight-300 max-h-[200px] overflow-y-auto"
                     (input)="adjustTextareaHeight(messageInput)"></textarea>
                 <div class="">
-                    <div
+                    <div (click)="onSubmit()"
                         class="h-[40px] w-[40px] text-midnight-400 bg-midnight-700 active:bg-midnight-750 hover:bg-midnight-650 flex items-center justify-center font-bold p-1 rounded-full">
                         <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" class=""
                             version="1.1" x="0px" y="0px" enable-background="new 0 0 24 24">
