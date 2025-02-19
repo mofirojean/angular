@@ -76,4 +76,3 @@ I welcome contributions from the community! To contribute to this project:
 Before submitting a pull request, please ensure your changes follow the project's coding standards and are well-documented.
 
 Thank you for helping improve this project!
-

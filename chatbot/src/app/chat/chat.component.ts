@@ -20,8 +20,8 @@ export class ChatComponent {
   chatHistory: Chat[] = [];
 
   adjustTextareaHeight(textarea: HTMLTextAreaElement) {
-    textarea.style.height = "auto"; // Reset height to calculate new height
-    textarea.style.height = `${Math.min(textarea.scrollHeight, 200)}px`; // Grow but limit to 200px
+    textarea.style.height = "auto";
+    textarea.style.height = `${Math.min(textarea.scrollHeight, 200)}px`;
   }
 
   constructor(private chatService: ChatService) {

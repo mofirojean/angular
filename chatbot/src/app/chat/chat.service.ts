@@ -14,7 +14,6 @@ export class ChatService {
     this.generativeAi = new GoogleGenerativeAI('GEMINI_API_KEY');
   }
 
-  // generate text
   async generateText(prompt: string) {
     const model = this.generativeAi.getGenerativeModel({ model: 'gemini-pro' });
     this.messageHistory.next({
