@@ -1,0 +1,14 @@
+{
+	"about": {
+		"text": "About Works"
+	},
+	"demo": {
+		"title": "Hello"
+	},
+	"home": {
+		"text": "Home Works"
+	},
+	"service": {
+		"text": "Service Works"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"about": {
+		"text": "À propos des œuvres"
+	},
+	"demo": {
+		"title": "Bonjour"
+	},
+	"home": {
+		"text": "Travaux à domicile"
+	},
+	"service": {
+		"text": "Travaux de service"
+	}
+}
