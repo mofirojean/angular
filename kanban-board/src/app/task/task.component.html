@@ -1,0 +1,8 @@
+@if (task) {
+<mat-card class="item" (click)="edit.emit(task)">
+  <h2>{{ task.title }}</h2>
+  <p>
+    {{ task.description }}
+  </p>
+</mat-card>
+}

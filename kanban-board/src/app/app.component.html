@@ -1,0 +1,67 @@
+<mat-toolbar color="primary">
+  <mat-icon>local_fire_department</mat-icon>
+  <span>Kanban Fire</span>
+</mat-toolbar>
+<div class="content-wrapper">
+  <button (click)="newTask()" mat-button>
+    <mat-icon>add</mat-icon> Add Task
+  </button>
+  <div class="container-wrapper">
+    <div class="container">
+      <h2>Backlog</h2>
+      <mat-card
+        cdkDropList
+        id="todo"
+        #todoList="cdkDropList"
+        [cdkDropListData]="todo"
+        [cdkDropListConnectedTo]="[doneList, inProgressList]"
+        (cdkDropListDropped)="drop($event)"
+        class="list"
+      >
+        @for (task of todo; track $index) {
+          <app-task (edit)="editTask('todo', $event)" cdkDrag [task]="task"></app-task>
+        } @empty {
+          <p class="empty-label">Empty List</p>
+        }
+      </mat-card>
+    </div>
+
+    <div class="container">
+      <h2>In Progress</h2>
+      <mat-card
+        cdkDropList
+        id="inProgress"
+        #inProgressList="cdkDropList"
+        [cdkDropListData]="inProgress"
+        [cdkDropListConnectedTo]="[todoList, doneList]"
+        (cdkDropListDropped)="drop($event)"
+        class="list"
+      >
+        @for (task of inProgress; track $index) {
+          <app-task (edit)="editTask('inProgress', $event)" cdkDrag [task]="task"></app-task>
+        } @empty {
+          <p class="empty-label">Empty List</p>
+        }
+      </mat-card>
+    </div>
+
+    <div class="container">
+      <h2>Done</h2>
+      <mat-card
+        cdkDropList
+        id="done"
+        #doneList="cdkDropList"
+        [cdkDropListData]="done"
+        [cdkDropListConnectedTo]="[todoList, inProgressList]"
+        (cdkDropListDropped)="drop($event)"
+        class="list"
+      >
+        @for (task of done; track $index) {
+          <app-task (edit)="editTask('done', $event)" cdkDrag [task]="task"></app-task>
+        } @empty {
+          <p class="empty-label">Empty List</p>
+        }
+      </mat-card>
+    </div>
+  </div>
+</div>
