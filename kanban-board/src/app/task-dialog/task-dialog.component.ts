@@ -28,7 +28,7 @@ import { MatIconModule } from '@angular/material/icon';
     .container {
       padding: 15px;
       display: flex;
-      justify-conten: center;
+      justify-content: center;
       flex-direction: column;
     }
   `,

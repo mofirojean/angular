@@ -13,12 +13,12 @@
         cdkDropList
         id="todo"
         #todoList="cdkDropList"
-        [cdkDropListData]="todo"
+        [cdkDropListData]="(todo | async) ?? []" 
         [cdkDropListConnectedTo]="[doneList, inProgressList]"
         (cdkDropListDropped)="drop($event)"
         class="list"
       >
-        @for (task of todo; track $index) {
+        @for (task of todo | async; track $index) {
           <app-task (edit)="editTask('todo', $event)" cdkDrag [task]="task"></app-task>
         } @empty {
           <p class="empty-label">Empty List</p>
@@ -32,12 +32,12 @@
         cdkDropList
         id="inProgress"
         #inProgressList="cdkDropList"
-        [cdkDropListData]="inProgress"
+        [cdkDropListData]="(inProgress | async) ?? []"
         [cdkDropListConnectedTo]="[todoList, doneList]"
         (cdkDropListDropped)="drop($event)"
         class="list"
       >
-        @for (task of inProgress; track $index) {
+        @for (task of inProgress | async; track $index) {
           <app-task (edit)="editTask('inProgress', $event)" cdkDrag [task]="task"></app-task>
         } @empty {
           <p class="empty-label">Empty List</p>
@@ -51,12 +51,12 @@
         cdkDropList
         id="done"
         #doneList="cdkDropList"
-        [cdkDropListData]="done"
+        [cdkDropListData]="(done | async) ?? []"
         [cdkDropListConnectedTo]="[todoList, inProgressList]"
         (cdkDropListDropped)="drop($event)"
         class="list"
       >
-        @for (task of done; track $index) {
+        @for (task of done | async; track $index) {
           <app-task (edit)="editTask('done', $event)" cdkDrag [task]="task"></app-task>
         } @empty {
           <p class="empty-label">Empty List</p>
